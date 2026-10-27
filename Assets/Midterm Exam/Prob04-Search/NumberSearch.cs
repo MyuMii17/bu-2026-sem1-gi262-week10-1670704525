@@ -17,8 +17,20 @@ namespace MidtermExam.Prob04
         /// </remarks>
         public int AS04_SequentialSearch(int[] values, int target)
         {
-            // TODO: เขียนคำตอบแทนคำสั่ง throw ด้านล่าง
-            throw new NotImplementedException();
+            int count = 0;
+            if(values == null) return -1;
+            for(int i = 0; i < values.Length; i++)
+            {
+                if(values[i] == target)
+                {
+                    count++;
+                }
+            }
+            if(count == 0)
+            {
+                return -1;
+            }
+            return count;
         }
 
         /// <summary>ข้อ 04.2: ค้นหาตัวเลขด้วย Binary Search โดยลดช่วงค้นหาประมาณครึ่งหนึ่งต่อขั้น</summary>
